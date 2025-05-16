@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Avatar from "../assets/avatar.jpeg";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="flex justify-center py-2.5 max-lg:px-2.5">
+    <main class="flex max-lg:flex-col gap-5">
+      <div class="flex justify-center">
+        <Image src={Avatar} alt="myself" class="w-36 rounded-full shrink-0" />
+      </div>
+      <section class="space-y-2.5">
+        <h1>Hi, I'm Sérgio</h1>
+        <p>I'm a software engineer from Brazil.</p>
+        <div>
+          <a href="//github.com/sergiors" target="_blank">
+            <Icon name="github" class="size-5 text-white" />
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
 </Layout>
